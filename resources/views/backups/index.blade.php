@@ -1,0 +1,6 @@
+@extends('layouts.app')
+@section('title', 'Backups')
+@section('eyebrow', 'System administration')
+@section('content')
+<section class="page-heading"><div><h1>Backups</h1><p>Review database backup history and operational readiness.</p></div><form method="POST" action="{{ route('backups.store') }}">@csrf<button class="button" type="submit">Create database backup</button></form></section><section class="panel"><div class="panel-heading"><div><h2>Backup history</h2><p>Each successful backup stores a SQL dump and its metadata.</p></div></div>@if($backups->isEmpty())<div class="empty-state"><strong>No backups recorded</strong>Create a database backup to protect hospital records.</div>@else<div class="table-wrap"><table class="data-table"><thead><tr><th>Name</th><th>Storage path</th><th>Size</th><th>Status</th><th>Created</th></tr></thead><tbody>@foreach($backups as $backup)<tr><td><strong>{{ $backup->backup_name }}</strong></td><td>{{ $backup->storage_path }}</td><td>{{ $backup->file_size ? number_format($backup->file_size).' bytes' : '-' }}</td><td><span class="badge {{ $backup->status === 'success' ? 'badge-success' : 'badge-danger' }}">{{ $backup->status }}</span></td><td>{{ $backup->created_at->format('d M Y, H:i') }}</td></tr>@endforeach</tbody></table></div>@endif</section>
+@endsection

@@ -1,0 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Verify sign in | MediCore</title>@vite(['resources/css/app.css', 'resources/js/app.js'])</head>
+<body class="login-body"><main class="login-shell"><section class="login-form"><h2>Verify your sign in</h2><p class="lead">Enter the six-digit code sent to your work email.</p>@if ($errors->any())<div class="alert alert-danger">{{ $errors->first() }}</div>@endif<form method="POST" action="{{ route('login.2fa.verify') }}">@csrf<div class="field"><label for="code">Verification code</label><input id="code" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" required autofocus></div><div class="form-actions"><button class="button" type="submit">Verify and continue</button></div></form></section></main></body>
+</html>

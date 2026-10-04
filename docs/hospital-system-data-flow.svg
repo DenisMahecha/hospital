@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Hospital System Data Flow</title>
+  <desc id="desc">Flow from patient arrival to discharge and admin oversight in a hospital management system</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#3b4d73"/>
+    </marker>
+    <style>
+      .title { font: 700 32px Arial, sans-serif; fill: #1d2b4f; }
+      .label { font: 600 19px Arial, sans-serif; fill: #1d2b4f; }
+      .small { font: 500 16px Arial, sans-serif; fill: #4a5a7a; }
+      .box { fill: #eef4ff; stroke: #3b4d73; stroke-width: 2; rx: 18; }
+      .decision { fill: #fff7e6; stroke: #c58a00; stroke-width: 2; rx: 18; }
+      .admin { fill: #edf8ef; stroke: #2d7d46; stroke-width: 2; rx: 18; }
+      .db { fill: #f4ebff; stroke: #6d45b2; stroke-width: 2; rx: 18; }
+      .arrow { stroke: #3b4d73; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #3b4d73; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <text x="900" y="48" text-anchor="middle" class="title">Hospital Management System Data Flow</text>
+
+  <rect x="80" y="90" width="170" height="80" class="box"/>
+  <text x="165" y="140" text-anchor="middle" class="label">Patient arrives</text>
+
+  <rect x="320" y="90" width="220" height="90" class="box"/>
+  <text x="430" y="128" text-anchor="middle" class="label">Reception /</text>
+  <text x="430" y="152" text-anchor="middle" class="label">Registration</text>
+
+  <rect x="620" y="90" width="210" height="100" class="decision"/>
+  <text x="725" y="126" text-anchor="middle" class="label">OPD or</text>
+  <text x="725" y="150" text-anchor="middle" class="label">IPD?</text>
+
+  <path d="M250 130 L320 130" class="arrow"/>
+  <path d="M540 130 L620 130" class="arrow"/>
+
+  <!-- OPD group -->
+  <rect x="900" y="70" width="260" height="110" class="box"/>
+  <text x="1030" y="108" text-anchor="middle" class="label">Patient record</text>
+  <text x="1030" y="132" text-anchor="middle" class="label">created</text>
+
+  <rect x="905" y="240" width="250" height="90" class="box"/>
+  <text x="1030" y="278" text-anchor="middle" class="label">Appointment / Visit</text>
+
+  <rect x="905" y="390" width="250" height="100" class="box"/>
+  <text x="1030" y="428" text-anchor="middle" class="label">Doctor consultation</text>
+
+  <rect x="905" y="560" width="250" height="100" class="box"/>
+  <text x="1030" y="598" text-anchor="middle" class="label">Diagnosis +</text>
+  <text x="1030" y="622" text-anchor="middle" class="label">Prescription</text>
+
+  <rect x="650" y="530" width="190" height="130" class="decision"/>
+  <text x="745" y="570" text-anchor="middle" class="label">Lab / Imaging</text>
+  <text x="745" y="594" text-anchor="middle" class="label">needed?</text>
+
+  <rect x="480" y="700" width="180" height="90" class="box"/>
+  <text x="570" y="738" text-anchor="middle" class="label">Lab Request</text>
+
+  <rect x="680" y="700" width="180" height="90" class="box"/>
+  <text x="770" y="738" text-anchor="middle" class="label">Radiology Request</text>
+
+  <rect x="470" y="850" width="210" height="90" class="box"/>
+  <text x="575" y="888" text-anchor="middle" class="label">Lab Technician</text>
+
+  <rect x="705" y="850" width="210" height="90" class="box"/>
+  <text x="810" y="888" text-anchor="middle" class="label">Radiologist</text>
+
+  <rect x="975" y="760" width="230" height="90" class="box"/>
+  <text x="1090" y="798" text-anchor="middle" class="label">Lab Results</text>
+
+  <rect x="1215" y="760" width="230" height="90" class="box"/>
+  <text x="1330" y="798" text-anchor="middle" class="label">Imaging Results</text>
+
+  <rect x="1170" y="930" width="240" height="90" class="box"/>
+  <text x="1290" y="968" text-anchor="middle" class="label">Pharmacist</text>
+
+  <rect x="1440" y="930" width="220" height="90" class="box"/>
+  <text x="1550" y="968" text-anchor="middle" class="label">Medicine dispensed</text>
+
+  <rect x="1420" y="1060" width="220" height="90" class="box"/>
+  <text x="1530" y="1098" text-anchor="middle" class="label">Billing + Payment</text>
+
+  <rect x="1180" y="1060" width="220" height="90" class="box"/>
+  <text x="1290" y="1098" text-anchor="middle" class="label">OPD discharge</text>
+
+  <!-- IPD group -->
+  <rect x="620" y="230" width="190" height="100" class="box"/>
+  <text x="715" y="268" text-anchor="middle" class="label">Admission</text>
+  <text x="715" y="292" text-anchor="middle" class="label">decision</text>
+
+  <rect x="620" y="360" width="190" height="100" class="box"/>
+  <text x="715" y="398" text-anchor="middle" class="label">Ward</text>
+  <text x="715" y="422" text-anchor="middle" class="label">assignment</text>
+
+  <rect x="620" y="490" width="190" height="100" class="box"/>
+  <text x="715" y="528" text-anchor="middle" class="label">Nurse / Doctor</text>
+  <text x="715" y="552" text-anchor="middle" class="label">monitoring</text>
+
+  <rect x="620" y="630" width="190" height="100" class="box"/>
+  <text x="715" y="668" text-anchor="middle" class="label">Inpatient</text>
+  <text x="715" y="692" text-anchor="middle" class="label">treatment</text>
+
+  <rect x="360" y="780" width="200" height="90" class="box"/>
+  <text x="460" y="828" text-anchor="middle" class="label">Discharge summary</text>
+
+  <rect x="165" y="910" width="190" height="90" class="box"/>
+  <text x="260" y="948" text-anchor="middle" class="label">Final billing</text>
+
+  <rect x="165" y="1030" width="190" height="90" class="box"/>
+  <text x="260" y="1068" text-anchor="middle" class="label">IPD discharge</text>
+
+  <!-- Database and admin -->
+  <rect x="1230" y="120" width="270" height="140" class="db"/>
+  <text x="1365" y="163" text-anchor="middle" class="label">System Database</text>
+  <text x="1365" y="192" text-anchor="middle" class="small">Patients, visits, billing,</text>
+  <text x="1365" y="214" text-anchor="middle" class="small">inventory, reports, logs</text>
+
+  <rect x="1450" y="310" width="290" height="140" class="admin"/>
+  <text x="1595" y="354" text-anchor="middle" class="label">Super-admin</text>
+  <text x="1595" y="382" text-anchor="middle" class="small">Users, reports, audit,</text>
+  <text x="1595" y="404" text-anchor="middle" class="small">settings, control</text>
+
+  <!-- Arrows from decision -->
+  <path d="M830 130 L900 130" class="arrow"/>
+  <path d="M725 190 L725 230" class="arrow"/>
+  <path d="M620 130 L620 230 L620 230" class="thin"/>
+
+  <!-- OPD flow -->
+  <path d="M1030 180 L1030 240" class="arrow"/>
+  <path d="M1030 330 L1030 390" class="arrow"/>
+  <path d="M1030 490 L1030 560" class="arrow"/>
+  <path d="M905 610 L840 610" class="arrow"/>
+  <path d="M650 610 L570 610 L570 700" class="arrow"/>
+  <path d="M570 790 L570 850" class="arrow"/>
+  <path d="M770 790 L770 850" class="arrow"/>
+  <path d="M1090 850 L1090 760" class="arrow"/>
+  <path d="M1330 850 L1330 760" class="arrow"/>
+  <path d="M1290 930 L1290 980" class="arrow"/>
+  <path d="M1290 1020 L1290 1060" class="arrow"/>
+  <path d="M1410 975 L1440 975" class="arrow"/>
+  <path d="M1530 1020 L1530 1060" class="arrow"/>
+
+  <!-- IPD flow -->
+  <path d="M725 330 L725 360" class="arrow"/>
+  <path d="M725 460 L725 490" class="arrow"/>
+  <path d="M725 590 L725 630" class="arrow"/>
+  <path d="M620 680 L560 680 L560 780" class="arrow"/>
+  <path d="M360 825 L260 825 L260 910" class="arrow"/>
+  <path d="M260 1000 L260 1030" class="arrow"/>
+
+  <!-- DB and admin links -->
+  <path d="M1230 190 L1100 190 L1100 240" class="thin"/>
+  <path d="M1365 260 L1365 310" class="thin"/>
+  <path d="M1595 450 L1595 520" class="thin"/>
+
+  <!-- Cross links to DB -->
+  <path d="M570 700 L570 650 L1230 650" class="thin"/>
+  <path d="M770 700 L770 650 L1230 650" class="thin"/>
+  <path d="M1090 760 L1090 690 L1230 690" class="thin"/>
+  <path d="M1330 760 L1330 690 L1230 690" class="thin"/>
+  <path d="M1290 930 L1290 660 L1230 660" class="thin"/>
+  <path d="M715 790 L715 990 L1230 990" class="thin"/>
+
+  <!-- Side labels -->
+  <text x="185" y="290" class="small">Patient journey starts</text>
+  <text x="310" y="440" class="small">OPD trajectory</text>
+  <text x="640" y="770" class="small">IPD trajectory</text>
+  <text x="1480" y="520" class="small">Administrative oversight</text>
+</svg>
