@@ -1,0 +1,61 @@
+{
+  "node_modules/@cornerstonejs/codec-charls/dist/charlswasm_decode.wasm": {
+    "file": "assets/charlswasm_decode-BrO4esUm.wasm",
+    "src": "node_modules/@cornerstonejs/codec-charls/dist/charlswasm_decode.wasm"
+  },
+  "node_modules/@cornerstonejs/codec-libjpeg-turbo-8bit/dist/libjpegturbowasm_decode.wasm": {
+    "file": "assets/libjpegturbowasm_decode-7ZJ2wGuU.wasm",
+    "src": "node_modules/@cornerstonejs/codec-libjpeg-turbo-8bit/dist/libjpegturbowasm_decode.wasm"
+  },
+  "node_modules/@cornerstonejs/codec-openjpeg/dist/openjpegwasm_decode.wasm": {
+    "file": "assets/openjpegwasm_decode-B3gWTHpv.wasm",
+    "src": "node_modules/@cornerstonejs/codec-openjpeg/dist/openjpegwasm_decode.wasm"
+  },
+  "node_modules/@cornerstonejs/codec-openjph/dist/openjphjs.wasm": {
+    "file": "assets/openjphjs-B5O5ikHp.wasm",
+    "src": "node_modules/@cornerstonejs/codec-openjph/dist/openjphjs.wasm"
+  },
+  "node_modules/@cornerstonejs/dicom-image-loader/dist/esm/codecs/jpeg.js": {
+    "file": "assets/jpeg-B-x1txLf.js",
+    "name": "jpeg",
+    "src": "node_modules/@cornerstonejs/dicom-image-loader/dist/esm/codecs/jpeg.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/jpeg-lossless-decoder-js/release/lossless.js": {
+    "file": "assets/lossless-CyYqoyFe.js",
+    "name": "lossless",
+    "src": "node_modules/jpeg-lossless-decoder-js/release/lossless.js",
+    "isDynamicEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-BYToQWUB.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-B0C0wsIE.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/dicom-viewer.js": {
+    "file": "assets/dicom-viewer-B6SHMCxc.js",
+    "name": "dicom-viewer",
+    "src": "resources/js/dicom-viewer.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/@cornerstonejs/dicom-image-loader/dist/esm/codecs/jpeg.js",
+      "node_modules/jpeg-lossless-decoder-js/release/lossless.js"
+    ],
+    "assets": [
+      "assets/libjpegturbowasm_decode-7ZJ2wGuU.wasm",
+      "assets/charlswasm_decode-BrO4esUm.wasm",
+      "assets/openjpegwasm_decode-B3gWTHpv.wasm",
+      "assets/openjphjs-B5O5ikHp.wasm"
+    ]
+  }
+}
